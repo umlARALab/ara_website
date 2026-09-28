@@ -459,6 +459,17 @@ export default function HomePage() {
                 </form>
             )}
 
+            <div className="mb-8 card-lift">
+                <NewsCard
+                    title="We are visiting IROS!"
+                    location="Pittsburgh"
+                    date="IROS 2026"
+                    description="The ARA Lab at IROS 2026."
+                    imageSrc={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/IROS.jpg`}
+                    imageAlt="ARA Lab members at IROS 2026 in Pittsburgh"
+                />
+            </div>
+
             <div className="space-y-8">
                 { loading ? ( 
                     <div className="text-center py-16">
