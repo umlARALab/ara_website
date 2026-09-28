@@ -20,7 +20,7 @@ const staticFaculty: Person[] = [
     {
         name: 'Maru Cabrera',
         title: 'Assistant Professor of Computer Science',
-        description: '',
+        description: 'Before this Assistant Professor position, I was a postdoctoral researcher at the University of Washington working with Maya Cakmak in the Human-Centered Robotics Lab. I received my Ph.D. from Purdue University advised by Juan P. Wachs. My research interests focus on Human-Robot Interaction (HRI), facilitating interactions between robots and humans by developing robotic systems with a user-centered approach; this approach draws from an interdisciplinary intersection between robotics, artificial intelligence, machine learning, computer vision, assistive technologies and human-centered design.',
         imageSrc: profileImages['maru cabrera'],
         imageAlt: 'Portrait of Maru Cabrera',
         website: 'https://www.uml.edu/robotics/faculty/cabrera-maru.aspx',
@@ -34,7 +34,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Timofey Fayzullin',
         title: 'PhD Student',
-        description: '',
+        description: 'Pursuing a PhD in Computer Science at the Miner School of Computer and Information Sciences at University of Massachusetts Lowell. Co-advised by Professor Maru Cabrera of the UML ARA lab and Professor Sam Reig of the UML PIERS lab. Work has been supported through the NSF AICARING grant. Has completed both a bachelors and masters degrees in computer science at UML and has brief prior work experience with Raytheon in between. General research goals focus on designing, evaluating, and developing embodied voice interfaces capable of inferring and interpreting user intent. Current research focus is on assistive home robots, specifically in the domain of elder care. Interested in pursuing collaborations across the HRI domain, especially when it comes to voice interaction or household robotics.',
         imageSrc: profileImages['timofey fayzullin'],
         imageAlt: 'Portrait of Timofey Fayzullin',
         website: 'https://dartik24.github.io/PersonalWebsite/',
@@ -45,7 +45,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Mark de Bruijn',
         title: 'PhD Student',
-        description: '',
+        description: 'Currently, I am completing my PhD in Computer Science at the Miner School of Computer and Information Sciences at University of Massachusetts Lowell. I am advised by Maru Cabrera, and am part of the ARA Lab. My work has been supported through the Office of Naval Research (ONR) and a teaching assistant position for computer architecture and mobile robots. The latter resulted in the Excellence in Teaching Award as recognition of outstanding contributions as an exemplary teaching assistant. Previously, I graduated from Vrije Universiteit Amsterdam with a MSc in Artificial Intelligence where I worked with Koen Hindriks, Artem Belopolsky, and Linlin Cheng on Gaze Estimation in human-robot interaction. My research interests lie in the area of task engagement, human attention, and human-robot interaction. I am particularly interested in developing systems that can effectively collaborate with humans in various tasks.',
         imageSrc: profileImages['mark de bruijn'],
         imageAlt: 'Portrait of Mark de Bruijn',
         website: 'https://debruijn.ai/',
@@ -67,7 +67,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Tam Nguyen',
         title: 'Graduate Student',
-        description: '',
+        description: 'I have been working with the lab since the summer after my freshman year through Immersive Scholars. I like Minecraft and robots.',
         imageSrc: profileImages['tam nguyen'],
         imageAlt: 'Portrait of Tam Nguyen',
         website: '',
