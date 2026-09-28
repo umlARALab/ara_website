@@ -44,7 +44,7 @@ export default function PersonCard({
       <div className="text-left flex-1">
         <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase" id={`person-${name}`}>{name}</h2>
         <p className="text-base font-black text-rose-600 mb-4 uppercase tracking-wide" role="doc-subtitle">{title}</p>
-        <p className="text-slate-700 mb-4 leading-relaxed font-medium">{description}</p>
+        {description && <p className="text-slate-700 mb-4 leading-relaxed font-medium">{description}</p>}
 
         {/* Projects Section */} 
         {projects && projects.length > 0 && (

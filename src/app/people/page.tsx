@@ -12,7 +12,7 @@ const staticFaculty: Person[] = [
     {
         name: 'Maru Cabrera',
         title: 'Assistant Professor of Computer Science',
-        description: 'Her research focuses on human-robot interaction for accessibility and assistive robotics.',
+        description: '',
         imageSrc: '',
         imageAlt: '',
         website: 'https://www.uml.edu/robotics/faculty/cabrera-maru.aspx',
