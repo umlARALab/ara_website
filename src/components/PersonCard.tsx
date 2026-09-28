@@ -30,7 +30,7 @@ export default function PersonCard({
 }: PersonCardProps) { 
   return (
     <div className="modern-card bg-white flex flex-col sm:flex-row items-center sm:items-start gap-6 border-l-4 border-l-rose-500 card-lift" role="article" aria-label={`Team member: ${name}, ${title}`}>
-        <div className="flex-shrink-0 w-full sm:w-40 relative">
+        {imageSrc && <div className="flex-shrink-0 w-full sm:w-40 relative">
             <div className="absolute -inset-3 bg-black opacity-20 rounded-lg blur-md"></div>
             <Image
             src={convertGoogleDriveUrl(imageSrc)}
@@ -39,7 +39,7 @@ export default function PersonCard({
             height={160} 
             className="rounded-lg object-cover w-full h-40 sm:w-40 sm:h-40 relative z-10 border-4 border-slate-900"
             />
-        </div>
+          </div>}
 
       <div className="text-left flex-1">
         <h2 className="text-2xl font-black text-slate-900 tracking-tight uppercase" id={`person-${name}`}>{name}</h2>

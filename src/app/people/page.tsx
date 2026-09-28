@@ -8,6 +8,20 @@ import { FormattedMessage } from "react-intl";
 import Link from 'next/link';
 import { tree } from 'next/dist/build/templates/app-page';
 
+const staticFaculty: Person[] = [
+    {
+        name: 'Maru Cabrera',
+        title: 'Assistant Professor of Computer Science',
+        description: 'Her research focuses on human-robot interaction for accessibility and assistive robotics.',
+        imageSrc: '',
+        imageAlt: '',
+        website: 'https://www.uml.edu/robotics/faculty/cabrera-maru.aspx',
+        projects: [],
+        active: true,
+        faculty: true,
+    },
+];
+
 export default function PeoplePage() {
     const { user } = useAuth();
     const [faculty, setFaculty] = useState<Person[]>([]);
@@ -31,13 +45,15 @@ export default function PeoplePage() {
     const editFormRef = useRef<HTMLFormElement>(null); 
 
     const getPeople = async () => { 
+        let data: Person[] = [];
+
         try {
             const response = await fetch('/api/people');
             if (!response.ok) {
                 throw new Error('Failed to fetch users'); 
             }
 
-            const data: Person[] = (await response.json())['data'].map((item: any) => {
+            data = (await response.json())['data'].map((item: any) => {
                 return {
                     id: item.id,
                     name: item.name,
@@ -52,25 +68,22 @@ export default function PeoplePage() {
                 }
             });
 
-        const facultyMembers: Person[] = data.filter((person) => person.faculty); 
-        const currentMembers: Person[] = data.filter((person) => person.active && !person.faculty); 
-        const alumniMembers: Person[] = data.filter((person) => !person.active && !person.faculty);
-
-        setFaculty(facultyMembers);
-        setLabMembers(currentMembers); 
-        setAlumni(alumniMembers);
-        //old way to filter without faculty column
-        //const lab: Person[] = data.filter((person) => person.active); 
-        //setLabMembers(lab)
-        
-        //const alum: Person[] = data.filter((person) => !person.active);
-        //setAlumni(alum)
-            
         } catch (err: any) {
             setError(err.message);
         } finally {
             setLoading(false);
         }
+
+        const people = [
+            ...data,
+            ...staticFaculty.filter((facultyMember) =>
+                !data.some((person) => person.name.trim().toLowerCase() === facultyMember.name.toLowerCase())
+            ),
+        ];
+
+        setFaculty(people.filter((person) => person.faculty));
+        setLabMembers(data.filter((person) => person.active && !person.faculty));
+        setAlumni(data.filter((person) => !person.active && !person.faculty));
     };
  
     useEffect(() => {
