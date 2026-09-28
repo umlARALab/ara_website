@@ -56,7 +56,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Varad Nevasekar',
         title: 'PhD Student',
-        description: '',
+        description: 'Varad Nevasekar is a Draper Scholar and PhD student in Computer Science at the University of Massachusetts Lowell. His research focuses on AI-enabled inspection systems, multimodal perception, vision-language models, uncertainty estimation, and human-in-the-loop decision support for safety-critical applications. At Draper, he investigates system reliability, model confidence, and deployment constraints for intelligent inspection workflows. His broader research spans assistive robotics, multimodal human-robot interaction, and system-level evaluation of vision-language robotics. Varad earned his B.S. and M.S. in Computer Science from UMass Lowell and has published work on robot-assisted indoor navigation for blind and low-vision individuals, and continues to explore reliable real-world AI.',
         imageSrc: profileImages['varad nevasekar'],
         imageAlt: 'Portrait of Varad Nevasekar',
         website: 'https://varadn.github.io/',
