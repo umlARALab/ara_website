@@ -104,7 +104,7 @@ export default function Navbar() {
             <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity group" aria-label="ARA Lab home">
             <Image 
-                src="/logo.png" 
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`}
                 alt="ARA Lab Logo"
                 width={50}
                 height={50}
@@ -177,7 +177,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2" aria-label="ARA Lab home">
                     <Image 
-                    src="/logo.png" 
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/logo.png`}
                     alt="ARA Lab Logo" 
                     width={40}
                     height={40}

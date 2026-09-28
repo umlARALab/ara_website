@@ -14,7 +14,7 @@ export default function Footer() {
             aria-label="Visit ARA Lab on X (formerly Twitter)"
             role="listitem"
           >
-            <img src="/icons/XIcon.png" alt="" className="icon" aria-hidden="true" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/XIcon.png`} alt="" className="icon" aria-hidden="true" />
           </a>*/}
 
           {/*link to instagram for lab*/}
@@ -26,7 +26,7 @@ export default function Footer() {
             aria-label="Visit ARA Lab on Instagram"
             role="listitem"
           >
-            <img src="/icons/instaIcon.png" alt="" className="icon" aria-hidden="true" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/instaIcon.png`} alt="" className="icon" aria-hidden="true" />
           </a>
           
           {/*link to youtube for lab*/}
@@ -39,7 +39,7 @@ export default function Footer() {
             aria-label="Visit ARA Lab on YouTube"
             role="listitem"
           >
-            <img src="/icons/youtubeIcon.png" alt="" className="icon" aria-hidden="true" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/youtubeIcon.png`} alt="" className="icon" aria-hidden="true" />
           </a>
           */}
 
@@ -52,7 +52,7 @@ export default function Footer() {
             aria-label="Visit ARA Lab on LinkedIn"
             role="listitem"
           >
-            <img src="/icons/linkedinIcon.png" alt="" className="icon" aria-hidden="true" />
+            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/linkedinIcon.png`} alt="" className="icon" aria-hidden="true" />
           </a> 
 
           

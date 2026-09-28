@@ -150,6 +150,12 @@ The backend and frontend are unified through Next.JS, so developing either only 
    - Connect your GitHub repository
    - Your app will be live at the provided Vercel URL
 
+### GitHub Pages
+
+Pushing to `main` builds a static export and deploys it to GitHub Pages. Set the repository's Pages source to **GitHub Actions** in the Pages settings. The project is published under `/ara_website/`.
+
+GitHub Pages cannot run the Next.js API routes or Supabase session middleware. The Pages build excludes those server-only files, so database-backed content and admin operations are unavailable there. Use Vercel for the full application.
+
 ## Pages
 
 1. **Home**
