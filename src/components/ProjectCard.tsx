@@ -8,6 +8,7 @@ interface ProjectCardProps {
   imageSrc: string; 
   imageAlt?: string;
   link?: string;
+  people?: string[];
   isEditing?: boolean;
   handlEdit?: () => void;
   handleDelete?: () => void;
@@ -19,6 +20,7 @@ export default function ProjectCard({
   imageSrc,
   imageAlt = "Image of a project",
   link,
+  people,
   isEditing,
   handlEdit,
   handleDelete,
@@ -54,6 +56,11 @@ export default function ProjectCard({
         }
         <div className="h-1 w-20 bg-rose-500 rounded-full mb-6"></div>
         <p className="text-slate-700 leading-relaxed font-medium">{description}</p>
+        {people && people.length > 0 && (
+          <p className="mt-4 text-sm font-semibold text-slate-600">
+            Lab members: {people.join(', ')}
+          </p>
+        )}
       </div>
 
       {/* Edit and Delete Buttons */}

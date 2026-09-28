@@ -7,6 +7,29 @@ import { Project } from '@/utils/types';
 import { useAuth } from "@/contexts/AuthContext";
 import { FormattedMessage } from "react-intl";
 
+const staticProjects: Project[] = [
+    {
+        id: -1,
+        title: 'Voice Interfaces In Household Assistive Systems for Older Adults',
+        description: 'This project presents a voice-first, multimodal interface for household assistive robots designed to support seamless and safe user-guided interactions within the physical domain. The system combines inference enabled voice interface with a GUI companion app for explicit user control and action transparency. By integrating structured processes for task confirmation and adjustment, our interface aims to improve reliability while remaining accessible to users with varying speech patterns and technological familiarity.',
+        imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Bring me a glass of water (2) - timofey fayzullin.png`,
+        imageAlt: 'Bring me a glass of water assistive robot interface',
+        people: ['Timofey Fayzullin'],
+        dateCreated: new Date('2026-09-28'),
+        link: '',
+    },
+    {
+        id: -2,
+        title: 'AR Visualization for Robot Motion Plans',
+        description: 'The work plans to focus on the visualization of planning and executing robot movement in an intuitive and understandable way for humans while doing household tasks. We aim to provide a more coherent form of communication for human-robot interaction. The end goal will be to provide users with an interface that informs them with comprehensible information regarding the robot’s plan and projected movements in order to complete typical household chores. We are in the process of incorporating augmented reality (AR) into the interface in order to present users with a visual in a real-world environment rather than just using the robot’s camera or simulation. Using a headset or camera, we aim to locate the robot and overlay a dynamic movement trajectory path that the robot plans to execute from an external point of view from the robot to allow for more environmental awareness. With this work, we hope to provide a clearer form of communication between robots and humans to allow for more cohesive human-robot interaction.',
+        imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/squareArucoDetection - Tam Nguyen.png`,
+        imageAlt: 'AR visualization for robot motion plans',
+        people: ['Tam Nguyen'],
+        dateCreated: new Date('2026-09-28'),
+        link: '',
+    },
+];
+
 export default function NewsPage() {
     const { user } = useAuth();
     const [projects, setProjects] = useState<Project[]>([]);
@@ -44,12 +67,14 @@ export default function NewsPage() {
 
     
     const getProjects = async () => {
+        let data: Project[] = [];
+
         try {
             const response = await fetch('/api/projects');
             if (!response.ok) {
                 throw new Error('Failed to fetch users');
             }
-            const data: Project[] = (await response.json())['data'].map((item: any) => {
+            data = (await response.json())['data'].map((item: any) => {
                 return {
                     id: item.id,
                     title: item.title,
@@ -57,19 +82,24 @@ export default function NewsPage() {
                     imageSrc: item.image,
                     imageAlt: item.image_alt,
                     dateCreated: new Date(item.date_created),
+                    people: item.people ?? [],
                     link: item.link
                 }
-            }).sort((a: Project, b: Project) => 
-                b.dateCreated.getTime() - a.dateCreated.getTime()
-            );
-
-            setProjects(data)
-            
+            });
         } catch (err: any) {
             setError(err.message);
         } finally {
             setLoading(false);
         }
+
+        const projectsWithFallbacks = [
+            ...data,
+            ...staticProjects.filter((staticProject) =>
+                !data.some((project) => project.title.trim().toLowerCase() === staticProject.title.toLowerCase())
+            ),
+        ].sort((a, b) => b.dateCreated.getTime() - a.dateCreated.getTime());
+
+        setProjects(projectsWithFallbacks);
     };
 
     useEffect(() => {
@@ -432,7 +462,8 @@ export default function NewsPage() {
                                         imageSrc={project.imageSrc}
                                         imageAlt={project.imageAlt}
                                         link={project.link}
-                                        isEditing={user ? true: false}
+                                        people={project.people}
+                                        isEditing={Boolean(user && project.id > 0)}
                                         handlEdit={() => startEdit(project)}
                                         handleDelete={() => handleDeleteProject(project.id!)}
                                     />
