@@ -9,11 +9,11 @@ import Link from 'next/link';
 import { tree } from 'next/dist/build/templates/app-page';
 
 const profileImages: Record<string, string> = {
-    'maru cabrera': '/img_src/Cabrera Maru_tcm18-343988.webp',
-    'timofey fayzullin': '/img_src/timofey-fayzullin.jpg',
-    'mark de bruijn': '/img_src/mark-de-bruijn.jpg',
-    'tam nguyen': '/img_src/tam-nguyen.jpg',
-    'varad nevasekar': '/img_src/Varad.jpg',
+    'maru cabrera': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Cabrera Maru_tcm18-343988.webp`,
+    'timofey fayzullin': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/timofey-fayzullin.jpg`,
+    'mark de bruijn': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/mark-de-bruijn.jpg`,
+    'tam nguyen': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/tam-nguyen.jpg`,
+    'varad nevasekar': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Varad.jpg`,
 };
 
 const staticFaculty: Person[] = [
