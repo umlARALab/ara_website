@@ -27,14 +27,14 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="modern-card bg-white relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border-l-4 border-l-blue-600 card-lift w-full" role="article" aria-label={`Project: ${title}`}>
-        <div className="flex-shrink-0 w-full sm:w-1/3 relative">
+        <div className="flex-shrink-0 w-full sm:w-1/3 aspect-[4/3] relative bg-slate-100 rounded-lg overflow-hidden">
             <div className="absolute -inset-3 bg-black opacity-20 rounded-lg blur-md"></div>
             <Image
             src={convertGoogleDriveUrl(imageSrc)} 
             alt={imageAlt}
             width={400}
             height={300}
-            className="rounded-lg object-cover w-full h-48 sm:h-40 relative z-10 border-4 border-slate-900"
+            className="rounded-lg object-contain w-full h-full relative z-10 border-4 border-slate-900"
             />
         </div> 
 
