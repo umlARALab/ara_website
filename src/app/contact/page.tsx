@@ -22,12 +22,13 @@ export default function ContactPage() {
 
         const first = (form.elements.namedItem("firstName") as HTMLInputElement).value;
         const last = (form.elements.namedItem("lastName") as HTMLInputElement).value;
+        const email = (form.elements.namedItem("email") as HTMLInputElement).value;
         
         const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
         const subject = encodeURIComponent(`Message from ${first} ${last}`);
         const body = encodeURIComponent(
-        `${message}`
+        `Name: ${first} ${last}\nEmail: ${email}\n\nMessage:\n${message}`
         );
 
         const mailto = `mailto:umlaralab@gmail.com?subject=${subject}&body=${body}`;
@@ -93,6 +94,25 @@ export default function ContactPage() {
                                         aria-required="true"
                                     />
                                 </div>
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-semibold text-gray-700 mb-1 text-left"
+                                >
+                                    <FormattedMessage id="contact.email" />
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder={placeholderText.email}
+                                    autoComplete="email"
+                                    className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-600 bg-white font-semibold"
+                                    required
+                                    aria-required="true"
+                                />
                             </div>
 
                             {/*Contact message*/}
