@@ -34,7 +34,7 @@ export default function ProjectCard({
             alt={imageAlt}
             width={400}
             height={300}
-            className="rounded-lg object-contain w-full h-full relative z-10 border-4 border-slate-900"
+            className="rounded-lg object-cover w-full h-full relative z-10 border-4 border-slate-900"
             />
         </div> 
 
