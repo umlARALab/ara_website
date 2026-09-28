@@ -22,6 +22,53 @@ const staticFaculty: Person[] = [
     },
 ];
 
+const staticLabMembers: Person[] = [
+    {
+        name: 'Timofey Fayzullin',
+        title: 'PhD Student & Research Assistant',
+        description: '',
+        imageSrc: '/img_src/timofey-fayzullin.jpg',
+        imageAlt: 'Portrait of Timofey Fayzullin',
+        website: 'https://dartik24.github.io/PersonalWebsite/',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+    {
+        name: 'Mark de Bruijn',
+        title: 'PhD Student',
+        description: '',
+        imageSrc: '/img_src/mark-de-bruijn.jpg',
+        imageAlt: 'Portrait of Mark de Bruijn',
+        website: 'https://debruijn.ai/',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+    {
+        name: 'Tam Nguyen',
+        title: 'Current Lab Member',
+        description: '',
+        imageSrc: '/img_src/tam-nguyen.jpg',
+        imageAlt: 'Portrait of Tam Nguyen',
+        website: '',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+    {
+        name: 'Varad Nevasekar',
+        title: 'PhD Student',
+        description: '',
+        imageSrc: '',
+        imageAlt: '',
+        website: 'https://varadn.github.io/',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+];
+
 export default function PeoplePage() {
     const { user } = useAuth();
     const [faculty, setFaculty] = useState<Person[]>([]);
@@ -74,16 +121,17 @@ export default function PeoplePage() {
             setLoading(false);
         }
 
+        const staticPeople = [...staticFaculty, ...staticLabMembers];
         const people = [
             ...data,
-            ...staticFaculty.filter((facultyMember) =>
-                !data.some((person) => person.name.trim().toLowerCase() === facultyMember.name.toLowerCase())
+            ...staticPeople.filter((staticPerson) =>
+                !data.some((person) => person.name.trim().toLowerCase() === staticPerson.name.toLowerCase())
             ),
         ];
 
         setFaculty(people.filter((person) => person.faculty));
-        setLabMembers(data.filter((person) => person.active && !person.faculty));
-        setAlumni(data.filter((person) => !person.active && !person.faculty));
+        setLabMembers(people.filter((person) => person.active && !person.faculty));
+        setAlumni(people.filter((person) => !person.active && !person.faculty));
     };
  
     useEffect(() => {
@@ -555,7 +603,7 @@ export default function PeoplePage() {
                                         imageAlt={person.imageAlt} 
                                         projects={person.projects}
                                         website={person.website} 
-                                        isEditing={user ? true: false}
+                                        isEditing={Boolean(user && person.id !== undefined)}
                                         handlEdit={() => startEdit(person)}
                                         handleDelete={() => handleDeletePerson(person.id!)}
                                     />
@@ -594,7 +642,7 @@ export default function PeoplePage() {
                                             imageAlt={person.imageAlt} 
                                             projects={person.projects}
                                             website={person.website} 
-                                            isEditing={user ? true: false}
+                                            isEditing={Boolean(user && person.id !== undefined)}
                                             handlEdit={() => startEdit(person)}
                                             handleDelete={() => handleDeletePerson(person.id!)}
                                         />
@@ -634,7 +682,7 @@ export default function PeoplePage() {
                                     imageAlt={person.imageAlt} 
                                     projects={person.projects}
                                     website={person.website} 
-                                    isEditing={user ? true: false}
+                                    isEditing={Boolean(user && person.id !== undefined)}
                                     handlEdit={() => startEdit(person)}
                                     handleDelete={() => handleDeletePerson(person.id!)}
                                 />
