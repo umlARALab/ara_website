@@ -480,12 +480,6 @@ export default function HomePage() {
                             <FormattedMessage id="news.loading" />
                         </p>
                     </div>
-                ) : newsItems.length === 0 ? (
-                    <div className="text-center py-16 pop-content">
-                        <p className="text-slate-700 text-lg font-bold p-8">
-                            <FormattedMessage id="news.none" />
-                        </p>
-                    </div>
                 ) : (newsItems.map((item) => (
                         <div key={item.id} className="card-lift">
                             <NewsCard
