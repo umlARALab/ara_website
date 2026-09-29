@@ -70,7 +70,7 @@ const staticLabMembers: Person[] = [
         description: 'I have been working with the lab since the summer after my freshman year through Immersive Scholars. I like Minecraft and robots.',
         imageSrc: profileImages['tam nguyen'],
         imageAlt: 'Portrait of Tam Nguyen',
-        website: '',
+        website: 'https://tamn11.github.io/',
         projects: [],
         active: true,
         faculty: false,
