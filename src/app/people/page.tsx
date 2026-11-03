@@ -67,7 +67,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Tam Nguyen',
         title: 'Graduate Student',
-        description: 'I have been working with the lab since the summer after my freshman year through Immersive Scholars. I like Minecraft and robots.',
+        description: 'I am pursuing a Master\'s Degree in Computer Science after graduating from UMass Lowell with a Bachelor\'s Degree in Computer Science. I started my work in the lab as an Immersive Scholar in Undergrad. My main work in the ARA Lab is my work with visualizing robotic movement with augmented reality which has been recognized by UMass Lowell\'s Richard A. Miner School of Computer & Information Sciences with an Outstanding Graduate Research Award. I\'ve also contributed to a publication of a journal article published with Brendan Hertel from UML\'s Pearl Lab titled, \"Automatic estimation and evaluation of multi-objective human preferences for Learning from Demonstration\".',
         imageSrc: profileImages['tam nguyen'],
         imageAlt: 'Portrait of Tam Nguyen',
         website: 'https://tamn11.github.io/',
