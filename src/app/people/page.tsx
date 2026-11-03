@@ -14,6 +14,9 @@ const profileImages: Record<string, string> = {
     'mark de bruijn': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/mark-de-bruijn.jpg`,
     'tam nguyen': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/tam-nguyen.jpg`,
     'varad nevasekar': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Varad.jpg`,
+    'riley miller': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/riley-miller.JPG`,
+    'percival villalva': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/percival-villalva.JPG`,
+    'sakhi patel': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/sakhi-patel.JPG`,
 };
 
 const staticFaculty: Person[] = [
@@ -71,6 +74,17 @@ const staticLabMembers: Person[] = [
         imageSrc: profileImages['tam nguyen'],
         imageAlt: 'Portrait of Tam Nguyen',
         website: 'https://tamn11.github.io/',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+    {
+        name: 'Riley Miller',
+        title: 'Graduate Student',
+        description: 'My name is Riley Miller, I am currently complete my masters degree at UMass Lowell as part of the four plus one program in computer science. I completed my bachelors in computer science with a minor in robotics from UML in spring of 2026. My current research interests lies in task dependencies between human and assistive robots. My current is work is on the development of a 2D game platform to mimic a table setting scenario in which the person and robot and working collaboratively.',
+        imageSrc: profileImages['riley miller'],
+        imageAlt: 'Portrait of Riley Miller',
+        website: '',
         projects: [],
         active: true,
         faculty: false,
