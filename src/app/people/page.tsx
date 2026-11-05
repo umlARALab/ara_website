@@ -59,7 +59,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Varad Nevasekar',
         title: 'PhD Student',
-        description: 'Varad Nevasekar is a Draper Scholar and PhD student in Computer Science at the University of Massachusetts Lowell. His research focuses on AI-enabled inspection systems, multimodal perception, vision-language models, uncertainty estimation, and human-in-the-loop decision support for safety-critical applications. At Draper, he investigates system reliability, model confidence, and deployment constraints for intelligent inspection workflows. His broader research spans assistive robotics, multimodal human-robot interaction, and system-level evaluation of vision-language robotics. Varad earned his B.S. and M.S. in Computer Science from UMass Lowell and has published work on robot-assisted indoor navigation for blind and low-vision individuals, and continues to explore reliable real-world AI.',
+        description: 'I am a Draper Scholar and PhD student in Computer Science at the University of Massachusetts Lowell. My research focuses on AI-enabled inspection systems, multimodal perception, vision-language models, uncertainty estimation, and human-in-the-loop decision support for safety-critical applications. At Draper, I am investigating system reliability, model confidence, and deployment constraints for intelligent inspection workflows. My broader research spans assistive robotics, multimodal human-robot interaction, and system-level evaluation of vision-language robotics. I earned his B.S. and M.S. in Computer Science from UMass Lowell and published work on robot-assisted indoor navigation for blind and low-vision individuals. I am continuing to explore reliable real-world AI.',
         imageSrc: profileImages['varad nevasekar'],
         imageAlt: 'Portrait of Varad Nevasekar',
         website: 'https://varadn.github.io/',
@@ -89,6 +89,40 @@ const staticLabMembers: Person[] = [
         active: true,
         faculty: false,
     },
+    // {
+    //     name: 'Matt Valeri',
+    //     title: 'Undergraduate',
+    //     description: 'I currently am pursuing a bachelor\'s degree in Computer Science here at UMass Lowell\'s Miner School of Computer and Information Sciences. I started working in the lab during the summer of 2026, funded through the Kennedy College of Sciences Summer Scholars Program, and currently am continuing that work for a directed study under Professor Maru Cabrera. This work has mainly focused on building an alternative system for autonomously grasping objects with our lab\'s Stretch robots. I\'m personally interested in HRI, as well as how robots interact with the physical world, and testing the limits of these interactions.',
+    //     imageSrc: profileImages['matt valeri'],
+    //     imageAlt: 'Portrait of Matt Valeri',
+    //     website: '',
+    //     projects: [],
+    //     active: true,
+    //     faculty: false,
+    // },
+    {
+        name: 'Percival Villalva',
+        title: 'Undergraduate Student',
+        description: 'I’m a Computer Science student interested in neural engineering and neural decoding. I’m currently working on a research project, supported by an Honors Fellowship, where I analyze motion data from immersive games designed for children with neuromotor disabilities. The goal is to better understand their movement patterns and help develop more accessible and effective rehabilitation technologies.',
+        imageSrc: profileImages['percival villalva'],
+        imageAlt: 'Portrait of Percival Villalva',
+        website: 'https://percivalvillalva.com/',
+        projects: [],
+        active: true,
+        faculty: false,
+    },
+    {
+        name: 'Sakhi Patel',
+        title: 'Undergraduate Student',
+        description: 'I am an undergrad pursuing a Bachelor\'s Degree in Computer Science with a concentration in Bio-Cheminformatics. I joined the lab through the Immersive Scholars Scholarship, with a goal of learning about the fundamentals of robotics and specifically working towards simplifying robot manipulation and improving object detection accuracy.',
+        imageSrc: profileImages['sakhi patel'],
+        imageAlt: 'Portrait of Sakhi Patel',
+        website: '',
+        projects: [],
+        active: true,
+        faculty: false,
+    },        
+
 ];
 
 export default function PeoplePage() {
