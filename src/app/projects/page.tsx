@@ -19,7 +19,7 @@ const staticProjects: Project[] = [
         link: '',
     },
     {
-        id: -5,
+        id: -2,
         title: 'Automatic estimation and evaluation of multi-objective human preferences for Learning from Demonstration',
         description: 'When robots are in the hands of end-users, they should perform tasks according to the preferences of those users. However, it is currently impractical to discover the preferences from those end-users without user-specific and task-specific feedback. To remedy this, we design and test an interface which can learn user preferences over time, eventually predicting their preference for the execution of any given task. Additionally, we collect data on user preferences from these interactions, aiming to find an overall preference of execution across tasks and across users. We validate several assumptions on user preference in a study (N = 10) which presents limited preference options to users. This validates our use of Pareto front options and choice of objectives in optimization. With the knowledge from this small study, we use an interface to let users explore their preference space for several unique tasks in a larger user study (N = 20). Our contributions include: (a) a novel Learning from Demonstration formulation for generating preference-aligned skill reproductions via multi-objective optimization, (b) a Graphical User Interface (GUI) for human-in-the-loop preference discovery, and (c) an analysis of inferred preferences across users and tasks. Through this analysis we find that individual users and tasks have specific preferences, but certain trends can be highlighted, like the desire for smooth and optimal robot execution.',
         imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Automatic_Tam.png`,
@@ -30,12 +30,12 @@ const staticProjects: Project[] = [
     },
     {
         id: -3,
-        title: 'Weld-PIC: An Uncertainty-Aware Vision-Language Weld Inspection',
-        description: 'A teacher–student VLM system for weld inspection with defect classification, explanations, and uncertainty estimation. This project is evaluated on reliability using calibration, false accept/reject rates, and human review for resource-constrained deployment.',
-        imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Weld.png`,
+        title: 'Weld-PICA: Traceable and Uncertainty-Aware Human-in-the-Loop Evidence for GMAW Weld Inspection',
+        description: 'End-to-end AI systems increasingly combine perception and language models to turn sensor data into human-facing assessments. Their outputs, however, are difficult to review when confidence scores are detached from source evidence, generated descriptions contain unsupported details, or uncertainty from different modules is collapsed into one value. We present Weld-PICA, a human-in-the-loop framework that converts object detections into source-linked, crop-grounded evidence records with explicit uncertainty and bounded interaction. Gas metal arc welding (GMAW) defect inspection provides the current case study, but the design applies more broadly to detection-plus-vision-language workflows in which a person retains decision authority. The offline prototype links YOLOv7 detections, padded crops, local vision-language observations, and stable finding identifiers. We describe the interaction model and a planned evaluation spanning detection, evidence grounding, and ProbVLM-style semantic uncertainty.',
+        imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Weld-PICA_Varad.png`,
         imageAlt: 'Weld inspection project',
         people: ['Varad Nevasekar'],
-        dateCreated: new Date('2026-09-28'),
+        dateCreated: new Date('2026-11-05'),
         link: '',
     },
     {
@@ -49,7 +49,7 @@ const staticProjects: Project[] = [
         link: '',
     },
     {
-        id: -6,
+        id: -5,
         title: 'Analyzing Gaze Behavior with an Underwater Robot in Virtual Reality during Task Execution',
         description: 'This study investigates the gaze behavior of people when they are completing a set of tasks in a simulated environment. An underwater robot uses a signal set of visual lights and kinemes to provide instructions to a person. Interruptions and sustained gaze behavior is investigated to gain a better understanding of attention when a person is interrupted by a robot while they are completing tasks.',
         imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Analyzing_Mark.png`,
@@ -59,7 +59,7 @@ const staticProjects: Project[] = [
         link: '',
     },
     {
-        id: -7,
+        id: -6,
         title: 'Seeing Eye Stretch: Robot-assisted Indoor Navigation for Blind or Low-Vision Individuals',
         description: 'This work describes the conceptualization and implementation of an end-to-end Robot-Assisted Indoor Navigation (RAIN) system that can provide relevant feedback at appropriate moments to blind or low-vision (BLV) individuals as they move through indoor public spaces. Such a system needs to include multiple inter-connected modules: an Object Detection module, an Adaptive Navigation module , and a Visual Question Answering (VQA) module that takes multimodal input (text and image), communicating with the BLV individual through a more natural interface that can process questions while maintaining alignment with the user\'s intent and awareness.',
         imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Seeing_Varad.gif`,
@@ -69,13 +69,23 @@ const staticProjects: Project[] = [
         link: 'https://doi.org/10.1109/UR65550.2025.11078138',
     },
     {
-        id: -2,
+        id: -7,
         title: 'Enhancing Legibility of Robot Actions through Simulating Robotic Movement using Augmented Reality in a Physical Space',
         description: 'This research focuses on enhancing the visualization of planning and executing robot movement in an intuitive and understandable way for humans, aiming to contribute a more coherent form of communication for human-robot interaction and bridge the gap between simulation to reality. We aim to develop a web-based interface that utilizes augmented reality (AR) for two platforms: a mobile device application and an augmented reality headset application. The goal is to provide users with comprehensible information regarding the robot’s plan and projected movements to complete typical household chores and tasks. We describe our approach of connecting an external camera device to our robotic system, implementing object detection and localization, and visualizing planned robot movements in preparation for execution through our web-based interface. Using our interface, the user is presented with overlayed information regarding the dynamic movement trajectory path that the robot plans to execute from an external point of view other than the robots to allow for more environmental awareness of its physical environment. This work has great potential impact on furthering human-robot interaction, especially in shared tasks, for domestic robots by improving robot-to-user communication.',
         imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/squareArucoDetection - Tam Nguyen.png`,
         imageAlt: 'AR visualization for robot motion plans',
         people: ['Tam Nguyen'],
         dateCreated: new Date('2026-09-28'),
+        link: '',
+    },
+    {
+        id: -8,
+        title: 'CROSS-VLR: A Cross-Domain System-Level Evaluation Framework for Vision-Language Robots',
+        description: 'This work introduces CROSS-VLR, a structured system-level evaluation methodology that treats these components as an interconnected system and emphasizes task-driven evaluation to trace behavior across module interactions. The methodology is retrospectively instantiated across diverse platforms and domains, including assistive navigation, industrial welding, and educational robotics. By organizing established interface-level measures around information transfer and relating them to end-to-end outcomes, CROSS-VLR supports traceable and comparable evaluation across applications. This work presents system-level evaluation as a complement to component-level and end-to-end measures for developing reliable and interpretable vision-language robotic systems.',
+        imageSrc: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/CROSS-VLR_Varad.jpg`,
+        imageAlt: 'Flow diagram of end-to-end system behavior',
+        people: ['Varad Nevasekar'],
+        dateCreated: new Date('2026-11-05'),
         link: '',
     },
 ];
