@@ -15,7 +15,7 @@ const profileImages: Record<string, string> = {
     'tam nguyen': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/tam-nguyen.jpg`,
     'varad nevasekar': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/Varad.jpg`,
     'riley miller': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/riley-miller.JPG`,
-    'percival villalva': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/percival-villalva.JPG`,
+    'percival villalva': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/percival-villalva.png`,
     'sakhi patel': `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/img_src/sakhi-patel.JPG`,
 };
 
@@ -103,7 +103,7 @@ const staticLabMembers: Person[] = [
     {
         name: 'Percival Villalva',
         title: 'Undergraduate Student',
-        description: 'I’m a Computer Science student interested in neural engineering and neural decoding. I’m currently working on a research project, supported by an Honors Fellowship, where I analyze motion data from immersive games designed for children with neuromotor disabilities. The goal is to better understand their movement patterns and help develop more accessible and effective rehabilitation technologies.',
+        description: 'I\'m a Computer Science student interested in neural engineering and neural decoding. I\'m currently working on a research project, supported by an Honors Fellowship, where I analyze motion data from immersive games designed for children with neuromotor disabilities. The goal is to better understand their movement patterns and help develop more accessible and effective rehabilitation technologies.',
         imageSrc: profileImages['percival villalva'],
         imageAlt: 'Portrait of Percival Villalva',
         website: 'https://percivalvillalva.com/',
